@@ -40,6 +40,7 @@ export default async function handler(req, res) {
     res.send("Quote deleted!");
   } else {
     // otherwise return quote object
+    res.setHeader("Content-Type", "application/json");
     res.json(quote.data());
   }
 }

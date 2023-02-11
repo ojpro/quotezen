@@ -10,5 +10,6 @@ export default async function handler(req, res) {
     allQuotes.push(quote.data());
   });
   // response with all the quotes
+  res.setHeader("Content-Type", "application/json");
   res.status(200).json(allQuotes);
 }
